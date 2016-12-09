@@ -1,0 +1,827 @@
+ChemestryRoot:
+<ChemestryRoot>
+
+
+	
+	ChooseForm:
+		orientation:"vertical"
+		canvas.before:
+			BorderImage:
+				source:"cover.PNG"
+				pos:self.pos
+				size:self.size
+		BoxLayout:
+			size_hint_y:2
+			
+		
+		BoxLayout:
+			
+			size_hint_y:6
+			BoxLayout:
+				size_hint_x:2
+			BoxLayout:
+
+				orientation:"vertical"
+				spacing:20
+				size_hint_x:6
+				
+					
+		
+		
+				Button:
+				
+					text:"Search Element"
+					font_size:35
+					bold:True
+					italic:True
+					background_normal:'red_button_normal.png'
+					background_down:'red_button_down.png'
+					background_color:(0.2,0.6,0.3,1.0)					
+					color:0,0,0,1
+					on_press:app.root.add_lookup_form()
+				Button:
+					text:"Quiz"
+					font_size:45
+					bold:True
+					italic:True
+					
+					color:0,0,0,1
+					background_normal:'red_button_normal.png'
+					background_down:'red_button_down.png'
+					
+					
+					background_color:(1.0,0.6,1.0,1.0)	
+					border:(20,20,20,20)
+					on_press:app.root.add_ask_form("carbon")
+				
+					
+				Button:
+					text:"Read"
+					font_size:45
+					background_normal:'red_button_normal.png'
+					background_down:'red_button_down.png'
+					italic:True
+					bold:True
+					color:0,0,0,1
+					background_color:(0.2,0.3,0.6,1.0)		
+					on_press:app.root.read()
+				
+				Button:
+					text:'credit'
+					font_size:45
+					bold:True
+					italic:True
+					color:0,0,0,1
+					background_normal:'red_button_normal.png'
+					background_down:'red_button_down.png'
+					
+					background_color:(0.6,0.7,0.5,1.0)		
+					on_press:app.root. credit()
+				Button:
+					text:"Quit"
+					font_size:45
+					color:0,0,0,1
+					background_normal:'red_button_normal.png'
+					background_down:'red_button_down.png'
+					italic:True
+					bold:True
+					background_color:(0.3,0.3,0.8,1.0)		
+					on_press:app.root.z.quit()
+			BoxLayout:
+				size_hint_x:2
+					
+		BoxLayout:
+			size_hint_y:2
+
+<Read@GridLayout>:
+	cols:2
+	canvas.before:
+		BorderImage:
+			source:"cover.PNG"
+			pos:self.pos
+			size:self.size
+
+				
+	spacing:5
+	Label:
+		text:"Element"
+		color:0,0,0,1
+		font_size:25
+		italic:True
+		bold:True
+	Label:
+		text:app.root.readele
+		
+		color:0,0,0,1
+		font_size:25
+		italic:True
+		bold:True
+		
+				
+	Label:
+		text:"Atomic number"
+		
+		color:0,0,0,1
+		font_size:25
+		italic:True
+		bold:True
+	
+	Label:
+		text:app.root.readato
+		
+		color:0,0,0,1
+		font_size:25
+		italic:True
+		bold:True
+	Label:
+		text:"Group"
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	Label:
+		text:app.root.grouped
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True		
+	Label:
+		text:"period"
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	Label:
+		text:app.root.peri
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	Label:
+		text:"Melting point"
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	Label:
+		text:app.root.readmel
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	Label:
+		text:"Relative mass"
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	Label:
+		text:app.root.readrel
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	Label:
+		text:"State"
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	Label:
+		text:app.root.readsta
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+		
+	Label:
+		text:"Symbol"
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	Label:
+		text:app.root.readsym
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+
+	Button:
+		text:"Next"
+		font_size:30
+		color:0,0,0,1
+		background_normal:'red_button_normal.png'
+		background_down:'red_button_down.png'
+		italic:True
+		bold:True
+					
+		background_color:(0.6,0.7,1.0,1.0)
+		on_press:app.root.read()
+		
+		
+	Button:
+		text:"Menu"
+		font_size:30
+		color:0,0,0,1
+		background_normal:'red_button_normal.png'
+		background_down:'red_button_down.png'
+		italic:True
+		bold:True
+		background_color:(1.0,0.6,1.0,1.0)			
+			
+		on_press:app.root.add_chose_form()
+<Ask@GridLayout>:
+	canvas.before:
+		BorderImage:
+			source:"cover.PNG"
+			pos:self.pos
+			size:self.size
+	spacing:5
+	cols:2
+	atomicn:atomicno
+	boilingn:boilingno
+	staten:stateno
+	meltingn:meltingno
+	relativen:relativeno
+	symboln:symbolno
+	Label:
+		text:"Element"
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	Label:
+		text:app.root.asked
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	Label:
+		text:"Atomic number"
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	TextInput:
+		id:atomicno
+		multiline:False
+	Label:
+		text:"Boiling point"
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	TextInput:
+		id:boilingno
+		multiline:False
+	Label:
+		text:"Melting point"
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	TextInput:
+		multiline:False
+		id:meltingno
+	Label:
+		text:"Relative mass"
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	TextInput:
+		multiline:False
+		id:relativeno
+	Label:
+		text:"State"
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	TextInput:
+		multiline:False
+		id:stateno
+	Label:
+		text:"Symbol"
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	TextInput:
+		multiline:False
+		id:symbolno
+	Button:
+		text:"Submit"
+		font_size:45
+		color:0,0,0,1
+		background_normal:'red_button_normal.png'
+		background_down:'red_button_down.png'
+		italic:True
+		bold:True
+		background_color:(0.3,0.5,1.0,1.0)			
+			
+		on_press:app.root.answered()
+		
+	Button:
+		text:"Menu"	
+		font_size:45
+		color:0,0,0,1
+		background_normal:'red_button_normal.png'
+		background_down:'red_button_down.png'
+		italic:True
+		bold:True
+		background_color:(1.0,0.6,1.0,1.0)			
+			
+		on_press:app.root.add_chose_form()
+<answered@BoxLayout>:
+	canvas.before:
+		BorderImage:
+			source:"cover.PNG"
+			pos:self.pos
+			size:self.size	
+	orientation:"vertical"
+	BoxLayout:
+		size_hint_y:1
+	
+		Label:
+			text:"Element:"
+			italic:True
+			color:0,0,0,1
+			font_size:25
+			bold:True
+		Label:
+
+			text:app.root.asked
+			italic:True
+			color:0,0,0,1
+			font_size:25
+			bold:True
+	BoxLayout:
+		orientation:"vertical"
+		size_hint_y:6		
+		Label:
+			text:app.root.cv.pop(0)
+			italic:True
+			color:0,0,0,1
+			font_size:25
+			bold:True
+		Label:
+			text:app.root.cv.pop(0)
+			italic:True
+			color:0,0,0,1
+			font_size:25
+			bold:True
+		Label:
+			text:app.root.cv.pop(0)
+			italic:True
+			color:0,0,0,1
+			font_size:20
+			bold:True
+		Label:
+			text:app.root.cv.pop(0)
+			italic:True
+			color:0,0,0,1
+			font_size:25
+			bold:True
+		Label:
+			text:app.root.cv.pop(0)
+			italic:True
+			color:0,0,0,1
+			font_size:25
+			bold:True
+		
+		Label:
+			text:app.root.cv.pop(0)
+			italic:True
+			color:0,0,0,1
+			font_size:25
+			bold:True
+	BoxLayout:
+		spacing:5
+		size_hint_y:1
+		Button:
+			text:"Ok"
+			font_size:45
+			color:0,0,0,1
+			background_normal:'red_button_normal.png'
+			background_down:'red_button_down.png'
+			italic:True
+			bold:True
+			background_color:(0.5,1,1.0,1.0)			
+			
+			on_press:app.root.add_ask_form("carbon")
+		
+		Button:
+			text:"Menu"
+			font_size:45
+			color:0,0,0,1
+			background_normal:'red_button_normal.png'
+			background_down:'red_button_down.png'
+			italic:True
+			bold:True
+			background_color:(1.0,0.6,1.0,1.0)			
+						
+			on_press:app.root.add_chose_form()
+
+<Lookup@GridLayout>:
+	canvas.before:
+		BorderImage:
+			source:"cover.PNG"
+			pos:self.pos
+			size:self.size
+	search_input:search_box
+	spacing:5
+	cols:2
+	Label:
+		text:"Element"
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	TextInput:
+		multiline:False
+		id:search_box
+		
+	Label:
+		text:"Element:"
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	Label:
+		text:search_box.text
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	Label:
+		text:"atomic number:"
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	Label:
+		
+	Label:
+		text:"Boiling point:"
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	Label:
+
+	Label:
+		text:"Melting point:"
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	Label:
+	Label:
+		text:"State:"
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	Label:
+	
+	Label:
+		text:"Symbol:"
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	Label:
+	
+	Label:
+		text:"relative atomic mass"
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	Label:
+	
+	Button:
+		text:"Search"
+		font_size:45
+		color:0,0,0,1
+		background_normal:'red_button_normal.png'
+		background_down:'red_button_down.png'
+		italic:True
+		bold:True
+		background_color:(0.6,0.7,1.0,1.0)			
+			
+		on_press:app.root.gen()
+	Button:
+		text:"Menu"
+		font_size:45
+		color:0,0,0,1
+		background_normal:'red_button_normal.png'
+		background_down:'red_button_down.png'
+		italic:True
+		bold:True
+		background_color:(1.0,0.6,1.0,1.0)			
+			
+		on_press:app.root.add_chose_form()
+<Answer@GridLayout>:
+	canvas.before:
+		BorderImage:
+			source:"cover.PNG"
+			pos:self.pos
+			size:self.size
+	spacing:5
+	cols:2
+	Label:
+		text:"Element"
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	TextInput:
+		multiline:False
+		text:app.root.cc
+		
+	Label:
+		text:"Element:"
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	Label:
+		text:app.root.cc.lower()
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	Label:
+		text:"atomic number:"
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	Label:
+		text:app.root.atomic
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	Label:
+		text:"Boiling point:"
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	Label:
+		text:app.root.boiling
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	Label:
+		text:"Melting point:"
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	Label:
+		text:app.root.melting
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	Label:
+		text:"State:"
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	Label:
+		text:app.root.state
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	Label:
+		text:"Symbol:"
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	Label:
+		text:app.root.symbol
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	Label:
+		text:"relative atomic mass"
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	Label:
+		text:app.root.relative
+		italic:True
+		color:0,0,0,1
+		font_size:25
+		bold:True
+	Button:
+		text:"Next"
+		font_size:45
+		color:0,0,0,1
+		background_normal:'red_button_normal.png'
+		background_down:'red_button_down.png'
+		italic:True
+		bold:True
+		background_color:(1.0,0.6,1.0,1.0)			
+			
+		on_press:app.root.add_lookup_form()
+	Button:
+		text:"Menu"
+		font_size:45
+		color:0,0,0,1
+		background_normal:'red_button_normal.png'
+		background_down:'red_button_down.png'
+		italic:True
+		bold:True
+		background_color:(1.0,0.7,0.3,1.0)			
+			
+		on_press:app.root.add_chose_form()
+
+
+
+	
+<Back@BoxLayout>:
+	orientation:"vertical"
+	canvas.before:
+		BorderImage:
+			source:"cover.PNG"
+			pos:self.pos
+			size:self.size
+	BoxLayout:
+		size_hint_y:2
+			
+		
+	BoxLayout:
+			
+		size_hint_y:6
+		BoxLayout:
+			size_hint_x:2
+		BoxLayout:
+			orientation:"vertical"
+			spacing:20
+			size_hint_x:6
+				
+					
+		
+		
+			Button:
+				
+				text:"Search Element"
+				font_size:35
+				bold:True
+				italic:True
+				background_normal:'red_button_normal.png'
+				background_down:'red_button_down.png'
+				background_color:(0.2,0.6,0.3,1.0)					
+				color:0,0,0,1
+				on_press:app.root.add_lookup_form()
+			Button:
+				text:"Quiz"
+				font_size:45
+				bold:True
+				italic:True
+					
+				color:0,0,0,1
+				background_normal:'red_button_normal.png'
+				background_down:'red_button_down.png'
+  
+				background_color:(1.0,0.6,1.0,1.0)		
+				on_press:app.root.add_ask_form("carbon")
+			Button:
+				text:"Balance"
+				font_size:45
+				italic:True
+				on_press:app.root.add_balance_form()
+			Button:
+				text:"Read"
+				font_size:45
+				background_normal:'red_button_normal.png'
+				background_down:'red_button_down.png'
+				italic:True
+				bold:True
+				color:0,0,0,1
+				background_color:(0.2,0.3,0.6,1.0)		
+				on_press:app.root.read()
+			Button:
+				text:'credit'
+				font_size:45
+				bold:True
+				italic:True
+				color:0,0,0,1
+				background_normal:'red_button_normal.png'
+				background_down:'red_button_down.png'
+					
+				background_color:(0.6,0.7,0.5,1.0)		
+				on_press:app.root. credit()
+			Button:
+				text:"Quit"
+				font_size:45
+				color:0,0,0,1
+				background_normal:'red_button_normal.png'
+				background_down:'red_button_down.png'
+				italic:True
+				bold:True
+				background_color:(0.3,0.3,0.8,1.0)		
+				on_press:app.root.z.quit()
+			BoxLayout:
+				size_hint_x:2
+					
+		BoxLayout:
+			size_hint_y:2	
+	
+				
+			
+<Credit@BoxLayout>:
+	canvas.before:
+		BorderImage:
+			source:"cover.PNG"
+			pos:self.pos
+			size:self.size
+	orientation:"vertical"
+	BoxLayout:
+		size_hint_y:
+		Label:
+			text:"ChemestryTutor"
+			color:0,0,0,1
+			bold:True
+			font_size:30
+	BoxLayout:
+		size_hint_y:10
+		orientation:"vertical"
+		Label:
+			text:"CODING"
+			color:0,0,0,1
+			bold:True
+			font_size:30
+			
+		Label:
+			text:"keith wachira"
+			color:0,0,0,1
+		Label:
+			text:"DOCUMENTATION"
+			color:0,0,0,1
+			bold:True
+			font_size:30
+		Label:
+			text:"keith wachira"
+			color:0,0,0,1
+		Label:
+			text:"IDEAS"
+			color:0,0,0,1
+			bold:True
+			font_size:30
+		Label:
+			text:"keith wachira"
+			color:0,0,0,1
+		Label:
+			text:"CONTACTS"
+			color:0,0,0,1
+			bold:True
+			font_size:30
+		Label:
+			text:"Email:keithwachira@gmail.com"
+			color:0,0,0,1
+		Label:
+			text:"twitter:@keithmunene"
+			color:0,0,0,1
+		Label:
+			text:"facebook:keith wachira munene"
+			color:0,0,0,1
+	BoxLayout:
+		spacing:5
+		size_hint_y:1
+		Button:
+			text:"Read"
+			font_size:45
+			color:0,0,0,1
+			background_normal:'red_button_normal.png'
+			background_down:'red_button_down.png'
+			italic:True
+			bold:True
+			background_color:(1.0,0.6,1.0,1.0)			
+			
+  
+			
+			on_press:app.root.read()
+		Button:
+			text:"Menu"
+			on_press:app.root.add_chose_form()
+			font_size:45
+			color:0,0,0,1
+			background_normal:'red_button_normal.png'
+			background_down:'red_button_down.png'
+			italic:True
+			bold:True
+			background_color:(0.6,0.7,0.5,1.0)		

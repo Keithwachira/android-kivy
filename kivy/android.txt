@@ -1,0 +1,3 @@
+title=ChemestryTutor
+author=keith wachira
+orientation=landscape|portrait
